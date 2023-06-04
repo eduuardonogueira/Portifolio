@@ -1,7 +1,5 @@
 # Bem-vindo ao meu Portfólio!
-<span style="background: #E5C07A;">🔗Link para acesso: https://eduardonogueiradev.github.io/Portifolio/ </span>
-<span style="color: yellow;"># Bem-vindo ao meu Portfólio!</span>
-
+#####🔗Link para acesso: https://eduardonogueiradev.github.io/Portifolio/
 
 Olá! Meu nome é Eduardo e este é o meu portfólio, onde compartilho com vocês minhas habilidades e projetos criados por mim. Sou apaixonado pela área de TI e tenho buscado constantemente aprimorar minhas habilidades e conhecimentos nesse campo emocionante.
 
