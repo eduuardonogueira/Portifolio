@@ -1,0 +1,369 @@
+body {
+    font-family: 'Fira Code', monospace;
+    background: var(--bg-gray);
+}
+
+:root {
+    --bg-gray: #282C33;
+    --white-primary: #fff;
+    --gray-tertiary: #ABB2BF;
+    --gray-secondary: #d6dde0;
+    --pink-primary: #C778DD;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+ 
+
+/* Menu */
+.menu {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    color: var(--white-primary)
+}
+
+.nav-list {
+    display: none;
+}
+
+.start, .trabalhos, .habilidades, .beneficios, .contato, .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 16px;
+    box-sizing: border-box;
+}
+
+/* Start */
+.start {
+    height: calc(100vh - 81px);
+    padding-bottom: 25px;
+    justify-content: space-between;
+}
+
+.start-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 12px;
+    width: 100%;
+    
+    > h1 {
+        font-size: 24px;
+        line-height: 31px;
+        color: var(--white-primary);
+        > span {
+            color: var(--pink-primary);
+        }
+    }
+
+    > p {
+        color: var(--gray-tertiary);
+
+    }
+
+    > a {
+        display: none;
+    }
+}
+
+.start-perfil {
+    width: 100%;
+}
+
+/* Frase */
+.frase {
+    width: 100%;
+    padding-inline: 16px;
+    box-sizing: border-box;
+}
+
+/* Trabalhos */
+.trabalhos {
+    gap: 24px;
+}
+
+.title {
+    display: flex;
+    gap: 12px ;
+    align-items: center;
+    > h1 {
+        font-size: 22px;
+        color: var(--white-primary);
+    }
+
+    > h1 ::after {
+        content: '#';
+        color: var(--pink-primary);
+    }
+
+    > hr {
+        flex-grow: 1;
+        height: 2px;
+        border: none;
+        background: var(--pink-primary);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-language {
+    display: flex;
+    color: var(--gray-tertiary);
+    padding: 8px;
+    border: 1px solid var(--gray-tertiary);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-tertiary);
+    padding: 8px;
+    gap: 16px;
+}
+
+.card-title {
+    color: var(--white-primary);
+    font-size: 22px;
+}
+
+.card-text {
+    color: var(--gray-tertiary);
+}
+
+.card-button {
+    display: flex;
+    gap: 4px;
+    box-sizing: border-box;
+    border: 1px solid var(--pink-primary);
+    padding: 8px;
+    width: 40%;
+    color: var(--white-primary);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Habilidades */
+.habilidades {
+    gap: 24px ;
+}
+
+.habilidades-content {
+    display: flex;
+    justify-content: space-between;
+
+    > img {
+        display: none;
+    }
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-grow: 1;
+}
+
+.box-title {
+    border: 1px solid var(--gray-tertiary);
+    color: var(--white-primary);
+    font-size: 16px;
+    padding: 8px;
+}
+
+.box-content {
+    display: flex;
+    border: 1px solid var(--gray-tertiary);
+}
+
+.table-column {
+    flex-direction: column;
+}
+
+.content-table {
+    > li {
+        display: flex;
+        padding: 8px;
+        color: var(--gray-tertiary);
+    }
+}
+
+/* Beneficios */
+.beneficios {
+    gap: 12px;
+
+    > img {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+.beneficios-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    > h1 {
+        font-size: 22px;
+        color: var(--white-primary);
+        margin: auto;
+    }
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: start;
+
+    > li {
+        color: var(--gray-tertiary);
+        list-style: disc outside;
+        margin-left: 18px;
+        box-sizing: border-box;
+        line-height: 18px;
+
+        > strong {
+            font-weight: 600;
+            color: var(--pink-primary);
+        }
+    }
+}
+
+/* Contato */
+.contato {
+    gap: 24px;
+}
+
+.contato-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    > p {
+        line-height: 18px;
+        color: var(--gray-tertiary);
+    }
+}
+
+.contato-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-tertiary);
+    padding: 16px;
+    gap: 16px;
+
+    > h1 {
+        color: var(--white-primary);
+        font-size: 18px;
+    }
+}
+
+.card-links{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    > a {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--gray-tertiary);
+        text-decoration: none;
+
+        :hover {
+            cursor: pointer;
+        }
+
+        > i {
+            font-size: 26px;
+        }
+    }    
+}
+
+/* Footer */
+.footer {
+    gap: 16px;
+    > hr {
+        width: 100%;
+        border: none;
+        height: 2px;
+        background: var(--gray-tertiary);
+    }
+
+    > p {
+        margin-bottom: 8px;
+        color: var(--gray-secondary);
+        text-align: center;
+    }
+}
+
+.footer-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > a {
+        color: var(--white-primary);
+        font-size: 14px;
+        text-decoration: none;
+    }
+}
+
+.footer-content {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    > h2 {
+        text-align: center;
+        font-size: 24px;
+        color: var(--white-primary);
+    }
+}
+
+.footer-links {
+    display: flex;
+    gap: 12px;
+
+    > a {
+        color: var(--gray-tertiary);
+        text-decoration: none;
+        
+
+        > i {
+            font-size: 32px;
+        }
+    }
+}
+
+.copyright {
+    color: var(--gray-tertiary) !important;
+    font-size: 12px;
+}
