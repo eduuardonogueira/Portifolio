@@ -21,11 +21,14 @@ main {
 /* Menu */
 .menu {
     display: flex;
+    position: fixed;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
     padding: 24px 16px;
     box-sizing: border-box;
+    background: var(--bg-gray);
+    z-index: 1;
 }
 
 .menu-icon {
@@ -47,9 +50,14 @@ main {
 
 /* Start */
 .start {
-    height: calc(100vh - 81px);
-    padding-bottom: 25px;
+    height: 90vh;
+    padding: 81px 16px 25px;
     justify-content: space-between;
+
+    > img {
+        width: 80%;
+        margin: auto;
+    }
 }
 
 .start-content {
@@ -85,7 +93,7 @@ main {
 /* Frase */
 .frase {
     width: 100%;
-    padding-inline: 16px;
+    padding: 75px 16px;
     box-sizing: border-box;
 }
 
