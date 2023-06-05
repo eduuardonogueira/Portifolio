@@ -1,5 +1,5 @@
 body {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', monospace !important;
     background: var(--bg-gray);
 }
 
@@ -15,6 +15,16 @@ main {
     display: flex;
     flex-direction: column;
     gap: 75px;
+}
+
+p {
+    align-self: flex-end;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray-tertiary);
 }
  
 
@@ -104,7 +114,7 @@ main {
 /* Start */
 .start {
     height: 100vh;
-    padding-block: 81px 25px;
+    padding-block: calc(81px + 25px) 25px;
     gap: 24px;
     justify-content: center;
 
@@ -176,6 +186,23 @@ main {
         border: none;
         background: var(--pink-primary);
     }
+}
+
+.button {
+    padding: 8px 18px;
+    color: var(--white-primary);
+    background: var(--pink-primary);
+    border: 1px solid var(--white-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    align-self: flex-end;
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .card {
@@ -319,11 +346,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 12px;
-
-    > p {
-        line-height: 18px;
-        color: var(--gray-tertiary);
-    }
 }
 
 .contato-card {
@@ -345,7 +367,7 @@ main {
     gap: 16px;
 
     > a {
-        font-size: 18px;
+        font-size: 16px;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -374,7 +396,6 @@ main {
 
     > p {
         margin-bottom: 8px;
-        color: var(--gray-secondary);
         text-align: center;
     }
 }
@@ -422,6 +443,6 @@ main {
 }
 
 .copyright {
-    color: var(--gray-tertiary) !important;
+    color: var(--gray-tertiary);
     font-size: 12px;
 }
