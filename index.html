@@ -18,10 +18,10 @@
         <nav id="menu" class="menu-nav">
             <i id="menuIcon" class="ph ph-list menu-icon"></i>
             <ul>
-                <li>home</li>
-                <li>trabalhos</li>
-                <li>habilidades</li>
-                <li>contato</li>
+                <li><a href="#start">home</a></li>
+                <li><a href="#trabalhos">trabalhos</a></li>
+                <li><a href="#habilidades">habilidades</a></li>
+                <li><a href="#contato">contato</a></li>
             </ul>
             <nav class="links">
                 <a href="">
@@ -36,7 +36,7 @@
             </nav>
         </nav>
     </header>
-    <section class="start">
+    <section id="start" class="start">
         <div class="start-content">
             <h1>Olá! sou Eduardo Nogueira, <span>designer e full-stack developer</span></h1>
             <p>
@@ -54,79 +54,82 @@
     <img class="frase" src="./assets/img/frase.png" alt="Não é sobre ter ideias, é sobre fazer com que elas aconteçam">
 
     <main>
-        <section class="trabalhos">
+        <section id="trabalhos" class="trabalhos">
             <div class="title">
                 <h1>Trabalhos</h1>
                 <hr>
             </div>
 
-            <article class="card">
-                <img src="./assets/img/card-img-seurl.png" alt="">
-                <p class="card-language">
-                    HTML
-                    CSS
-                    Javascript
-                    Fastify
-                    Vite.js
-                    Prisma
-                </p>
-                <div class="card-content">
-                    <h1 class="card-title">Seurl</h1>
-                    <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
-                    <a class="card-button" href="">
-                        Navegar 
-                        <i class="ph ph-arrow-circle-right"></i>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="./assets/img/card-img-seurl.png" alt="">
-                <p class="card-language">
-                    HTML
-                    CSS
-                    Javascript
-                    Fastify
-                    Vite.js
-                    Prisma
-                </p>
-                <div class="card-content">
-                    <h1 class="card-title">Seurl</h1>
-                    <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
-                    <a class="card-button" href="">
-                        Navegar 
-                        <i class="ph ph-arrow-circle-right"></i>
-                    </a>
-                </div>
-            </article>
-
-            <article class="card">
-                <img src="./assets/img/card-img-seurl.png" alt="">
-                <p class="card-language">
-                    HTML
-                    CSS
-                    Javascript
-                    Fastify
-                    Vite.js
-                    Prisma
-                </p>
-                <div class="card-content">
-                    <h1 class="card-title">Seurl</h1>
-                    <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
-                    <a class="card-button" href="">
-                        Navegar 
-                        <i class="ph ph-arrow-circle-right"></i>
-                    </a>
-                </div>
-            </article>
-
-            <button class="button">
-                Veja mais
-                <i class="ph ph-arrow-circle-right"></i>
-            </button>
+            <div class="trabalhos-content">
+                <article class="card">
+                    <img src="./assets/img/card-img-seurl.png" alt="">
+                    <p class="card-language">
+                        HTML
+                        CSS
+                        Javascript
+                        Fastify
+                        Vite.js
+                        Prisma
+                    </p>
+                    <div class="card-content">
+                        <h1 class="card-title">Seurl</h1>
+                        <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
+                        <a class="card-button" href="">
+                            Navegar 
+                            <i class="ph ph-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <img src="./assets/img/card-img-seurl.png" alt="">
+                    <p class="card-language">
+                        HTML
+                        CSS
+                        Javascript
+                        Fastify
+                        Vite.js
+                        Prisma
+                    </p>
+                    <div class="card-content">
+                        <h1 class="card-title">Seurl</h1>
+                        <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
+                        <a class="card-button" href="">
+                            Navegar 
+                            <i class="ph ph-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </article>
+    
+                <article class="card">
+                    <img src="./assets/img/card-img-seurl.png" alt="">
+                    <p class="card-language">
+                        HTML
+                        CSS
+                        Javascript
+                        Fastify
+                        Vite.js
+                        Prisma
+                    </p>
+                    <div class="card-content">
+                        <h1 class="card-title">Seurl</h1>
+                        <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
+                        <a class="card-button" href="">
+                            Navegar 
+                            <i class="ph ph-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </article>
+    
+                <button class="button">
+                    Veja mais
+                    <i class="ph ph-arrow-circle-right"></i>
+                </button>
+            </div>
+            
         </section>
 
-        <section class="habilidades">
+        <section id="habilidades" class="habilidades">
             <div class="title">
                 <h1>Habilidades</h1>
                 <hr>
@@ -195,7 +198,7 @@
             </div>
         </section>
 
-        <section class="beneficios">
+        <section id="beneficios" class="beneficios">
             <img src="./assets/img/interrogacao.png" alt="Ponto de Interrogação">
             <div class="beneficios-content">
                 <h1>Quais os benefícios?</h1>
@@ -220,7 +223,7 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section id="contato" class="contato">
             <div class="title">
                 <h1>Contato</h1> 
                 <hr>

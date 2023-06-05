@@ -63,12 +63,16 @@ p {
         flex-direction: column;
         justify-content: space-around;
         height: 70%;
-        color: var(--gray-tertiary);
         font-size: 24px;
         
         > li::before {
             content: "#";
             color: var(--pink-primary);
+        }
+
+        > li a {
+            text-decoration: none;
+            color: var(--gray-tertiary); ;
         }
     }
 
@@ -103,7 +107,7 @@ p {
 }
 
 
-.start, .trabalhos, .habilidades, .beneficios, .contato, .footer {
+.start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -117,11 +121,6 @@ p {
     padding-block: calc(81px + 25px) 25px;
     gap: 24px;
     justify-content: center;
-
-    > img {
-        width: 100%;
-        margin: auto;
-    }
 }
 
 .start-content {
@@ -140,11 +139,6 @@ p {
         }
     }
 
-    > p {
-        color: var(--gray-tertiary);
-
-    }
-
     > a {
         display: none;
     }
@@ -152,12 +146,13 @@ p {
 
 .start-perfil {
     width: 100%;
+    margin: auto;
 }
 
 /* Frase */
 .frase {
     width: 100%;
-    padding: 75px 32px;
+    padding-block: 75px;
     box-sizing: border-box;
 }
 
@@ -166,7 +161,14 @@ p {
     gap: 24px;
 }
 
+.trabalhos-content { 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .title {
+    width: 100%;
     display: flex;
     gap: 12px ;
     align-items: center;
@@ -205,6 +207,11 @@ p {
     line-height: 24px;
 }
 
+.button:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
 .card {
     display: flex;
     flex-direction: column;
@@ -212,6 +219,8 @@ p {
 
 .card-language {
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
     color: var(--gray-tertiary);
     padding: 8px;
     border: 1px solid var(--gray-tertiary);
@@ -240,7 +249,7 @@ p {
     box-sizing: border-box;
     border: 1px solid var(--pink-primary);
     padding: 8px;
-    width: 40%;
+    width: fit-content;
     color: var(--white-primary);
     font-size: 16px;
     text-decoration: none;
@@ -314,6 +323,11 @@ p {
         font-size: 22px;
         color: var(--white-primary);
         margin: auto;
+    }
+
+    > h1::before {
+        content: '#';
+        color: var(--pink-primary);
     }
 }
 
@@ -445,4 +459,322 @@ p {
 .copyright {
     color: var(--gray-tertiary);
     font-size: 12px;
+}
+
+@media screen and (min-width: 768px ) {
+    main {
+        gap: 100px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .button {
+        padding: 16px;
+    }
+
+    .trabalhos, .habilidades, .contato, .beneficios-content {
+        gap: 32px;
+    }
+
+    .title{
+        > h1 {
+            font-size: 26px;
+        }
+    }
+    
+    .menu {
+
+    }
+
+    .menu-nav {
+        width: 65%;
+
+        > i {
+            display: none;
+        }
+
+        > ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > li {
+                > a {
+                    text-decoration: none;
+                    color: var(--white-primary);
+                }
+            }
+
+            > li::before {
+                content: "#";
+                color: var(--pink-primary);
+            }
+        }
+    }
+
+    .start {
+        flex-direction: row;
+        height: auto;
+        gap: 12px;
+        justify-content: space-between;
+        
+    }
+
+    .start-content {
+        justify-content: center;
+
+        > h1 {
+            font-size: 28px;
+        }
+
+        > a {
+            margin-top: 20px;
+            display: flex;
+            text-decoration: none;
+            align-self: flex-start;
+        }
+    }
+
+    .start-perfil {
+        width: 45%
+    }
+
+
+    /*  Trabalhos */
+    .trabalhos-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        > button {
+            align-self: center;
+            margin: auto;
+        }
+    }
+
+    .card {
+        max-width: 48.2%;
+    }
+
+    .card-button {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    /* Habilidades */
+    .habilidades-content {
+        align-items: center;
+
+        > img {
+            display: flex;
+            width: 32%;
+            height: 70%;
+        }
+    }
+
+    .boxes {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 24px;
+    }
+
+    /* Beneficios */
+    .beneficios {
+        flex-direction: row;
+        justify-content: space-between;
+
+        > img {
+            width: 35%;
+        }
+    }
+
+    .beneficios-content {
+        > h1 {
+            font-size: 26px;
+            margin: unset;
+        }
+    }
+
+    /* Contato */
+    .contato {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .contato-card {
+        width: 42.8%;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+                            "line line"
+                            "title media"
+                            "text media"
+                            "signature signature";
+
+        > hr {
+            grid-area: line;
+        }
+
+        > p {
+            grid-area: text;
+            text-align: start;
+            margin-bottom: 32px;
+        }
+
+        .copyright {
+            grid-area: signature;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+    }
+
+    .footer-title {
+        grid-area: title;
+        width: auto;
+        justify-content: start;
+        gap: 24px;
+    }
+
+    .footer-content {
+        grid-area: media;
+    }
+
+    .copyright {
+        grid-area: signature;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .button, .card-button {
+        padding: 16px 24px;
+    }
+
+    .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase, .menu {
+        padding-inline: 64px ;
+    }
+
+    .trabalhos, .habilidades, .contato, .beneficios-content {
+        gap: 48px;
+    }
+
+    .menu-nav {
+        > ul {
+            > li {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* Inicio */
+    .start {
+        justify-content: space-between;
+    }
+
+    .start-content {
+        width: 48%;
+
+        > h1 {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    .start-perfil {
+        width: 40%;
+        margin: unset;
+    }
+
+    /* Frase */
+    .frase {
+        width: 70%;
+        margin: auto;
+        padding-block: 150px ;
+    }
+
+    /* Trabalhos */
+    .card {
+        width: 31.5%;
+    }
+
+    .trabalhos-content {
+        justify-content: flex-end;
+        > button {
+            margin: unset;
+        }
+    }
+
+    /* Habilidades */
+    .boxes {
+        gap: 32px;
+    }
+
+    /* Beneficios */
+    .beneficios {
+        justify-content: space-between;
+
+        > img {
+            margin: unset;
+        }
+    }
+
+    .beneficios-content {
+        width: 55%;
+    }
+
+    .content-text {
+        gap: 24px;
+    }
+
+    /* Contato */
+    .contato {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+                            "contato contato contato"
+                            "contato-text contate redes";
+        gap: 24px;
+
+        > .title {
+            grid-area: contato;
+            margin-bottom: 24px;
+        }
+    }
+
+    .contato-text {
+        grid-area: contato-text;
+    }
+
+    .contato-card {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase, .menu {
+        padding-inline: 128px ;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase, .menu {
+        padding-inline: 190px ;
+    }
+
+    .start {
+        height: 100vh;
+        padding-block: none;
+
+        > img {
+            margin-block: auto;
+        }
+    }
 }
