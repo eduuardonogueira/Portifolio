@@ -32,7 +32,7 @@ p {
 .menu {
     display: flex;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 24px 32px;
@@ -253,7 +253,14 @@ p {
     color: var(--white-primary);
     font-size: 16px;
     text-decoration: none;
+    transition: 1s;
 }
+
+.card-button:hover {
+    background: var(--pink-primary);
+}
+
+
 
 /* Habilidades */
 .habilidades {
@@ -461,6 +468,14 @@ p {
     font-size: 12px;
 }
 
+
+@media screen and (min-width: 450px ) {
+    .start-perfil {
+        width: 85%;
+        max-width: 380px;
+    }
+}
+
 @media screen and (min-width: 768px ) {
     main {
         gap: 100px;
@@ -485,10 +500,6 @@ p {
         }
     }
     
-    .menu {
-
-    }
-
     .menu-nav {
         width: 65%;
 
@@ -539,7 +550,8 @@ p {
     }
 
     .start-perfil {
-        width: 45%
+        width: 45%;
+        max-width: unset;
     }
 
 
@@ -665,6 +677,8 @@ p {
     }
 
     .menu-nav {
+        width: 60%;
+
         > ul {
             > li {
                 font-size: 18px;
@@ -700,13 +714,37 @@ p {
 
     /* Trabalhos */
     .card {
-        width: 31.5%;
+        width: 100%;
+        max-width: unset;
+
+        > img {
+            width: 100%;
+        }
     }
 
+    .card:nth-child(1) {
+        grid-area: card-1;
+    }
+
+    .card:nth-child(2) {
+        grid-area: card-2;
+    }
+
+    .card:nth-child(3) {
+        grid-area: card-3;
+    }
+    
     .trabalhos-content {
-        justify-content: flex-end;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+                            "card-1 card-2 card-3"
+                            "vazio vazio button";
         > button {
             margin: unset;
+            grid-area: button;
         }
     }
 
