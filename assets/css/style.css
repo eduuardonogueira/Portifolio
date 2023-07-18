@@ -3,6 +3,10 @@ body {
     background: var(--bg-gray);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --bg-gray: #282C33;
     --white-primary: #fff;
@@ -28,6 +32,8 @@ p {
 }
  
 
+
+
 /* Menu */
 .menu {
     display: flex;
@@ -47,7 +53,7 @@ p {
     grid-template-rows: auto 1fr auto;
     flex-direction: column;
     position: fixed;
-    height: 100vh;
+    height: calc(100vh - 72px);
     width: 70%;
     right: 0px;
     top: 0px;
@@ -84,6 +90,7 @@ p {
         > a {
             color: var(--gray-tertiary);
             text-decoration: none;
+
     
             > i {
                 font-size: 32px;
@@ -105,6 +112,8 @@ p {
     font-size: 2rem;
     color: var(--white-primary)
 }
+
+
 
 
 .start, .trabalhos, .habilidades, .beneficios, .contato, .footer, .frase {
@@ -232,6 +241,10 @@ p {
     border: 1px solid var(--gray-tertiary);
     padding: 8px;
     gap: 16px;
+}
+
+.card-image {
+    width: 100%;
 }
 
 .card-title {

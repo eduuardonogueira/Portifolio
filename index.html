@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/img/icon.png">
     <link rel="stylesheet" href="./assets/css/reset.css"> 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet"> 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title>Document</title>
+    <title>Portifólio | Eduardo nogueira</title>
 </head>
 <body>
+
     <header class="menu">
         <h1 class="menu-logo"><img src="./assets/img/logo.png" alt=""></h1>
         <nav id="menu" class="menu-nav">
@@ -23,7 +25,7 @@
                 <li><a href="#habilidades">habilidades</a></li>
                 <li><a href="#contato">contato</a></li>
             </ul>
-            <nav class="links">
+            <nav id="redes" class="links">
                 <a href="">
                     <i class="ph ph-instagram-logo"></i>
                 </a>
@@ -36,6 +38,7 @@
             </nav>
         </nav>
     </header>
+
     <section id="start" class="start">
         <div class="start-content">
             <h1>Olá! sou Eduardo Nogueira, <span>designer e full-stack developer</span></h1>
@@ -82,19 +85,26 @@
                 </article>
     
                 <article class="card">
-                    <img src="./assets/img/card-img-seurl.png" alt="">
+                    <video 
+                        class="card-image" 
+                        src="./assets/img/midianet-video.mkv" 
+                        autoplay    
+                        loop>
+                    </video>
                     <p class="card-language">
                         HTML
                         CSS
                         Javascript
-                        Fastify
-                        Vite.js
-                        Prisma
+                        Bootstrap
                     </p>
                     <div class="card-content">
-                        <h1 class="card-title">Seurl</h1>
-                        <p class="card-text" >Site gerador de urls, qrcodes e páginas de links.</p>
-                        <a class="card-button" href="">
+                        <h1 class="card-title">MIDIANET</h1>
+                        <p class="card-text">Site responsivo desenvolvido para um provedor de internet.</p>
+                        <a 
+                            class="card-button" 
+                            target="_blank"
+                            href="https://eduardonogueiradev.github.io/midianet/"
+                        >
                             Navegar 
                             <i class="ph ph-arrow-circle-right"></i>
                         </a>
@@ -277,6 +287,7 @@
                 </nav>
             </article>
         </section>
+
         <footer class="footer">
             <hr>
             <div class="footer-title">
